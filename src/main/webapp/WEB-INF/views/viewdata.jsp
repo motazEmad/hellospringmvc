@@ -13,6 +13,6 @@
 	<li><c:out value="${book.name}"></c:out></li>
 </c:forEach>
 </ul>
-<a href="home"> Go Back &lt; &lt; </a>
+<a href="${pageContext.request.contextPath}/home"> Go Back &lt; &lt; </a>
 </body>
 </html>

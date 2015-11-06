@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean id="sessionBooks" class="com.hello.helloApp.dto.SessionBooks"
+		scope="session" >
+		<aop:scoped-proxy />
+	</bean>
+	
+	<bean id="applicationBooks" class="com.hello.helloApp.dto.ApplicationBooks"
+		scope="singleton" >
+		<aop:scoped-proxy />
+	</bean>
 
-	<!-- <bean id="sessionFactory"
-		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
-		<property name="mappingResources">
-			<list>
-				<value>beans/Contacts.hbm.xml</value>
-				<value>beans/Users.hbm.xml</value>
-			</list>
-		</property>
-		<property name="hibernateProperties">
-			<props>
-				<prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
-				<prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/test</prop>
-				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
-				<prop key="hibernate.connection.username">root</prop>
-				<prop key="hibernate.connection.password">root</prop>
-			</props>
-		</property>
-	</bean> -->
+	<!-- <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"> 
+		<property name="mappingResources"> <list> <value>beans/Contacts.hbm.xml</value> 
+		<value>beans/Users.hbm.xml</value> </list> </property> <property name="hibernateProperties"> 
+		<props> <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop> 
+		<prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/test</prop> 
+		<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop> <prop 
+		key="hibernate.connection.username">root</prop> <prop key="hibernate.connection.password">root</prop> 
+		</props> </property> </bean> -->
 </beans>

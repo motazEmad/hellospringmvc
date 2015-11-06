@@ -1,3 +1,7 @@
-The OpenShift `jbossas` cartridge documentation can be found at:
+Simple Spring MVC application
 
-http://openshift.github.io/documentation/oo_cartridge_guide.html#jbossas
+provide the user to add books to application scope, session scope and request scope
+and store books to DB -- to be implemented using Hibernate
+
+try it online on
+(http://hellospringmvc-commic.rhcloud.com) 

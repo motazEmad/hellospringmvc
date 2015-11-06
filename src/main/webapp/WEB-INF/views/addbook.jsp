@@ -7,11 +7,13 @@
 <title>add book</title>
 </head>
 <body>
-<form action="" method="POST">
+<form action="addbook" method="POST">
 	<label>Book Name:</label> 
 	<input type="text" name="bookName">
 	<br/>
-	<input type="submit" value="Add"/>
+	<input type="submit" value="Add To App" name="op"/>
+	<input type="submit" value="Add To Session" name="op"/>
+	<input type="submit" value="Add To Request" name="op"/>
 </form>
 </body>
 </html>
